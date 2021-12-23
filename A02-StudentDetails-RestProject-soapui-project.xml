@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ea0ac944-72e7-455b-9627-2909db1d5893" activeEnvironment="Default" name="A02_StudentDetails_RestProject" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="cf4764db-2a27-4d83-8ae1-62362ba03004" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.thetestingworldapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.thetestingworldapi.com</con:endpoint></con:endpoints><con:resource name="StudentsDetails" path="/api/studentsDetails" id="3e99495f-4dc0-400b-bd64-6398a49ed65d"><con:settings/><con:parameters/><con:method name="getStudentsDetailsResourse" id="c33cda50-a117-4fcb-89bf-fa8d031fa108" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="2d2245d7-5d0d-42ca-a14c-96dc2094d9bc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.thetestingworldapi.com</con:endpoint><con:request/><con:originalUri>http://www.thetestingworldapi.com/api/studentsDetails</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="eeaf4dbf-9725-400d-bd5d-ea0347877a97" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://www.thetestingworldapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://www.thetestingworldapi.com</con:endpoint></con:endpoints><con:resource name="StudentsDetails" path="/api/studentsDetails" id="d6928a44-34f9-45d1-b2db-2c781fd8d8a9"><con:settings/><con:parameters/><con:method name="AddResourse" id="4e97106a-4a2e-4723-8cfa-9c8b10b18c16" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:stud="https://www.thetestingworldapi.com/api/studentsDetails">stud:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="18557207-c8a1-49f9-91cd-51ca47582c94" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.thetestingworldapi.com</con:endpoint><con:request>{
+ 
+  "first_name": "sample string 2",
+  "middle_name": "sample string 3",
+  "last_name": "sample string 4",
+  "date_of_birth": "sample string 5"
+}</con:request><con:originalUri>https://www.thetestingworldapi.com/api/studentsDetails</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="73f8517f-f4c6-42f7-9a81-102974bb3b13" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.thetestingworldapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.thetestingworldapi.com</con:endpoint></con:endpoints><con:resource name="ID" path="/api/studentsDetails/{ID}" id="c2223a7d-c9b8-4699-9f47-fe273a63c9d3"><con:settings/><con:parameters><con:parameter><con:name>ID</con:name><con:value>ID</con:value><con:style>TEMPLATE</con:style><con:default>ID</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="UpdateResourse" id="5b80f9eb-5ede-480e-b337-a981d99cbe3d" method="PUT"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://www.thetestingworldapi.com/api/studentsDetails/541152">ns:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="a0884761-009e-4941-88d5-19b296a9ef4d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.thetestingworldapi.com</con:endpoint><con:request>{
+  "id": ${#TestSuite#ID},
+  "first_name": "sample string 2",
+  "middle_name": "sample string 3",
+  "last_name": "sample string 4",
+  "date_of_birth": "sample string 5"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#TestSuite#ID}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="71040b5c-d7f7-4147-bf82-6abb1d3eeb06" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://www.thetestingworldapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://www.thetestingworldapi.com</con:endpoint></con:endpoints><con:resource name="ID" path="/api/studentsDetails/{ID}" id="0f373eca-18eb-49b7-904c-3fe18d7f81a0"><con:settings/><con:parameters><con:parameter><con:name>ID</con:name><con:value>ID</con:value><con:style>TEMPLATE</con:style><con:default>ID</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="DeleteResourse" id="7fbf3d4f-1ab1-4425-8244-fa2d5f0d95ae" method="DELETE"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="https://www.thetestingworldapi.com/api/studentsDetails/541152">ns:Response</con:element></con:representation><con:request name="Request 1" id="f0d5263f-d7bd-4fcb-a594-131676066f2b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.thetestingworldapi.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#TestSuite#ID}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="0b61dcb2-6658-4b56-a445-385b6e7192db" name="TestSuite"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="556c64dc-ee7f-4a1a-9b00-dacc7532f6f7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC1_AddStudentDetails" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="TS1_AddRequest" id="6d2bc29e-3262-465c-b3db-8aa29ac93dee"><con:settings/><con:config service="https://www.thetestingworldapi.com" resourcePath="/api/studentsDetails" methodName="AddResourse" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="TS2_AddRequest" id="18557207-c8a1-49f9-91cd-51ca47582c94" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.thetestingworldapi.com</con:endpoint><con:request>{"date_of_birth":"28-sept-1982","first_name":"Ranbir","last_name":"Kapoor","middle_name":"Raj"}</con:request><con:originalUri>https://www.thetestingworldapi.com/api/studentsDetails</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="GS1_AddRequest" id="2fde91fa-9348-43ba-8fa3-1ae8488fd9cd"><con:settings/><con:config><script>//Script written by Pankaj.
+//import
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+// request
+def restRequest = testRunner.testCase.getTestStepByName('TS1_AddRequest');
+def requestBody =restRequest.getPropertyValue('Request');
+
+// parse the request
+def jsonReq = new JsonSlurper().parseText(requestBody);
+
+//get the value from Properties
+def firstName = testRunner.testCase.testSuite.getPropertyValue( "firstName" )
+def middleName = testRunner.testCase.testSuite.getPropertyValue( "middleName" )
+def lastName = testRunner.testCase.testSuite.getPropertyValue( "lastName" )
+def dateOfBirth = testRunner.testCase.testSuite.getPropertyValue( "dateOfBirth" )
+log.info "firstName: $firstName ,  middleName: $middleName , lastName: $lastName , dateOfBirth: $dateOfBirth"
+
+//set the value in request from Properties
+jsonReq.first_name = firstName
+jsonReq.middle_name = middleName
+jsonReq.last_name = lastName
+jsonReq.date_of_birth = dateOfBirth
+
+// parse json to string in order to save it as a property
+def jsonReqAsString = JsonOutput.toJson(jsonReq)
+
+// save as request for the next testStep
+restRequest.setPropertyValue('Request',jsonReqAsString);
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//execute the test step operation through groovy
+ restRequest.run(testRunner,context)
+
+// get the response using the name of test step
+def responseBody =restRequest.getPropertyValue('Response');
+
+// parse the request
+def jsonResp = new JsonSlurper().parseText(responseBody);
+
+// get the values from test response 
+def idResp = jsonResp.id
+def firstNameResp = jsonResp.first_name
+def middleNameResp = jsonResp.middle_name
+def lastNameResp = jsonResp.last_name
+def dateOfBirthResp = jsonResp.date_of_birth
+log.warn "firstNameResp: $firstNameResp ,  middleNameResp: $middleNameResp , lastNameResp: $lastNameResp , dateOfBirthResp: $dateOfBirthResp"
+//-----------------------------------------------------------------------------------------------------------------------
+
+//set ID value in Suite level properties
+def idRespToString = jsonResp.id.toString()
+testRunner.testCase.testSuite.setPropertyValue("ID",idRespToString)
+
+//validate response value 
+assert firstName == firstNameResp, "expected firstName not match with response firstName"
+assert middleName == middleNameResp, "expected middleName not match with response middleName"
+assert lastName == lastNameResp, "expected lastName not match with response lastName"
+assert dateOfBirth == dateOfBirthResp, "expected dateOfBirth not match with response dateOfBirth"
+
+// validate HTTP status code
+def httpResponseHeaders = testRunner.testCase.testSteps["TS1_AddRequest"].testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("HTTP status code: " + httpStatusCode)
+assert httpStatusCode=="201", "HTTP status code not match"
+
+// validate response time
+ def ResponseTime= testRunner.testCase.testSteps["TS1_AddRequest"].testRequest.response.timeTaken
+ log.info "ResponseTime = $ResponseTime" 
+ assert ResponseTime &lt; 2000 , "response time is greater then 2000"
+
+// validate content type
+def contentType = httpResponseHeaders["Content-Type"]
+log.info "contentType = $contentType"
+assert contentType.contains("application/json; charset=utf-8"), "content type not as per expected"
+
+</script></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:testCase id="4c85a06e-0f27-499f-9ebc-fa2b566cacce" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC2_GetStudentDetails" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="TS1_GetRequest" id="0979710f-0885-4a2d-92c2-2b446726bdc7"><con:settings/><con:config service="http://www.thetestingworldapi.com" methodName="getStudentsDetailsResourse" resourcePath="/api/studentsDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="TS1_GetRequest" id="c160325f-3ddf-4032-bfd7-7dc040f95349" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.thetestingworldapi.com</con:endpoint><con:request/><con:originalUri>http://www.thetestingworldapi.com/api/studentsDetails</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:testCase id="90724fb7-07cd-4275-bb26-36110df40cad" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC3_UpdateStudentDetails" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="TS1_UpdateRequest" id="f9a97953-cdac-4280-912c-9c164fc90a6d"><con:settings/><con:config service="http://www.thetestingworldapi.com" resourcePath="/api/studentsDetails/{ID}" methodName="UpdateResourse" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="TS3_UpdateRequest" id="a0884761-009e-4941-88d5-19b296a9ef4d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.thetestingworldapi.com</con:endpoint><con:request>{"date_of_birth":"24-April-1987","first_name":"Varun","id":"541322","last_name":"Dhavan","middle_name":"David"}</con:request><con:originalUri>http://www.thetestingworldapi.com/api/studentsDetails/541152</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#TestSuite#ID}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:testCase id="5402ebfb-e0a8-4699-8e1f-936ca513e8b3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC4_DeleteStudentDetails" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="TS1_DeleteRequest" id="1e75644b-ac1f-4ca4-b900-4484aedffb1b"><con:settings/><con:config service="https://www.thetestingworldapi.com" resourcePath="/api/studentsDetails/{ID}" methodName="DeleteResourse" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="TS1_DeleteRequest" id="f0d5263f-d7bd-4fcb-a594-131676066f2b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.thetestingworldapi.com</con:endpoint><con:request/><con:originalUri>https://www.thetestingworldapi.com/api/studentsDetails/541152</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="${#TestSuite#ID}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:properties><con:property><con:name>ID</con:name><con:value>541686</con:value></con:property><con:property><con:name>firstName</con:name><con:value>Ranbir</con:value></con:property><con:property><con:name>middleName</con:name><con:value>Raj</con:value></con:property><con:property><con:name>lastName</con:name><con:value>Kapoor</con:value></con:property><con:property><con:name>dateOfBirth</con:name><con:value>28-sept-1982</con:value></con:property><con:property><con:name>firstNameUpdated</con:name><con:value>Varun</con:value></con:property><con:property><con:name>middleNameUpdated</con:name><con:value>David</con:value></con:property><con:property><con:name>lastNameUpdated</con:name><con:value>Dhavan</con:value></con:property><con:property><con:name>dateOfBirthUpdated</con:name><con:value>24-April-1987</con:value></con:property></con:properties></con:testSuite><con:testSuite id="4dedb153-f208-4035-ac0e-0be5d0253b4a" name="Library" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="42f88dbf-994e-46e0-8474-053cc8b29483" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reporting_Utility" searchProperties="true"><con:settings/><con:testStep type="groovy" name="GenerateCSVReport" id="205516fb-23ad-42ec-b9bb-7b1934e44b72"><con:settings/><con:config><script>   // Try-catch block to handle exceptions
+try {
+
+// 1. Create a "SoapUIResults" folder in the project path 
+   // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/SoapUIResults";
+
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+
+/* ------------------------------------------------------------------------------- */
+
+// 2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response_"+executionDate;
+
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 3. Create another subfolder "CSV Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/CSV Reports";
+
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 4. Create a Report.csv file inside the CSV Reports folder 
+      // Create a File object for Report csv file (with timestamp)
+      def reportFile = new File(subfolderPath2, "Report_"+executionDate+".csv");
+
+      // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write('"Test Suite","Test Case","Test Step","Step Type","Step Status",'
+                        +'"Result message","Execution Date"');
+      }
+/* ------------------------------------------------------------------------------- */
+// 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+
+   // Creating new line in report file
+   reportFile.append('\n');
+
+   // Write all the necessary information in the file
+   reportFile.append('"' + testSuite + '",');
+   reportFile.append('"' + testCase + '",');
+   reportFile.append('"' + testStepName + '",');
+   reportFile.append('"' + type + '",');
+   reportFile.append('"' + status + '",');
+
+   // Retrieve the test result messages
+   reportFile.append('"');
+   for(resMessage in stepResult.getMessages())
+   {
+     // Write messages and separate multiple messages by new line
+     reportFile.append('Message:' + resMessage + '\n');
+   }
+   reportFile.append('",');
+
+   //Write executionDate in the file
+   reportFile.append('"' + executionDate + '",');
+/* ------------------------------------------------------------------------------- */
+// 6. Extract the request and response and save it to external file
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+        if((type=="request").or(type=="restrequest"))
+        {
+          // Extract the request from the test step
+          def extRequest = testStep.properties["Request"].value;    
+
+      // Create a file in the reports folder and write the request
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rqfile = new File(requestFile);
+      rqfile.write(extRequest, "UTF-8");
+
+      // Extract the response from the test step
+      def extResponse = stepResult.getResponseContent();    
+
+      // Create a file in the reports folder and write the response
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rsfile = new File(responseFile);
+      rsfile.write(extResponse, "UTF-8");
+     }
+   }
+ }
+catch(exc)
+{
+   log.error("Exception happened: " + exc.toString());
+}</script></con:config></con:testStep><con:tearDownScript/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
